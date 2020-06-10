@@ -125,6 +125,21 @@ pegnetorpd uses CCXT for polling pAssets prices from top 10 external exchanges.
     "Bitstamp": 247.615,
     "Bittrex": 247.55563634499998
   },
+  "AUD": {
+    "Exchangeratesapi.io": 0.7012946979205766,
+    "Freeforexapi.com": 0.7003100272490631,
+    "Fixer.io": 0.7019546792277843
+  },
+  "NZD": {
+    "Exchangeratesapi.io": 0.6553551881042964,
+    "Freeforexapi.com": 0.654398869198754,
+    "Fixer.io": 0.6558879428551371
+  },
+  "SEK": {
+    "Exchangeratesapi.io": 0.10874241193111582,
+    "Freeforexapi.com": 0.10901891696247133,
+    "Fixer.io": 0.10916948720748262
+  }
   ...
 }
 ```

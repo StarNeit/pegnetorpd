@@ -22,6 +22,7 @@ router.get('/', async (req, res) => {
         SUPPORT_ASSETS.map(async (item, index) => {
             const asset = item[0];
             const isCryptoAsset = item[1];
+            const ratesList = [];
             rates[asset] = {};
 
             await Promise.all(
@@ -32,10 +33,25 @@ router.get('/', async (req, res) => {
                         const price = await getRateWithProvider(asset, provider);
                         if (price !== 'N/A'){
                             rates[asset][provider] = price;
+                            ratesList.push(price);
                         }
                     }
                 })
             );
+
+            const ds = ratesList.sort();
+            const middle = ds[Math.floor(ds.length / 2)];
+
+            let toleranceRate;
+            if (middle >= 1000) toleranceRate = 0.01;
+            else toleranceRate = 0.1;
+
+            const toleranceBandHigh = middle * (1 + toleranceRate);
+            const toleranceBandLow = middle * (1 - toleranceRate);
+
+            rates[asset]['AVERAGE'] = middle; // Trimmed Mean (removed noisy from highest & lowest)
+            rates[asset]['TOLERANCE_BAND_LOW'] = toleranceBandLow;
+            rates[asset]['TOLERANCE_BAND_HIGH'] = toleranceBandHigh;
         })
     );
     res.json(rates);

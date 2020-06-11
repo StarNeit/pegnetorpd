@@ -87,59 +87,88 @@ pegnetorpd uses CCXT for polling pAssets prices from top 10 external exchanges.
 ```shell
 {
   "PEG": {
-    "Coingecko": 0.00146778,
-    "Coinmarketcap": 0.00135881879228,
-    "Factoshi.io": 0.0013482055
+    "Coingecko": 0.00112305,
+    "Coinmarketcap": 0.00112273351945,
+    "Factoshi.io": 0.0010901776,
+    "AVERAGE": 0.00112273351945,
+    "TOLERANCE_BAND_LOW": 0.001010460167505,
+    "TOLERANCE_BAND_HIGH": 0.001235006871395
   },
   "USD": {
     "Exchangeratesapi.io": 1,
     "Freeforexapi.com": 1,
-    "Fixer.io": 1
+    "Fixer.io": 1,
+    "AVERAGE": 1,
+    "TOLERANCE_BAND_LOW": 0.9,
+    "TOLERANCE_BAND_HIGH": 1.1
   },
   "XBT": {
-    "Coingecko": 9884.04,
-    "Coincap.io": 9889.977199335026,
-    "Coinmarketcap": 9905.62300205,
-    "Alternative.me": 9884.04,
-    "CryptoCompare": 9883.61,
-    "Binance": 9878.005000000001,
-    "HuobiGlobal": 9877.305,
-    "CoinbasePro": 9881.64,
-    "Kraken": 9887.9,
-    "Bitfinex": 9850.25,
-    "Bitstamp": 9882.154999999999,
-    "bitFlyer": 9884.04,
-    "Bittrex": 9878.26034852
+    "Coingecko": 9653.16,
+    "Coincap.io": 9681.746819911552,
+    "Coinmarketcap": 9746.62527675,
+    "Alternative.me": 9653.16,
+    "CryptoCompare": 9679.56,
+    "Binance": 9691.224999999999,
+    "HuobiGlobal": 9691.665,
+    "CoinbasePro": 9678.185000000001,
+    "Kraken": 9681.75,
+    "Bitfinex": 9673.3,
+    "Bitstamp": 9678.645,
+    "bitFlyer": 9683.7,
+    "Bittrex": 9690.633619555,
+    "AVERAGE": 9681.746819911552,
+    "TOLERANCE_BAND_LOW": 9584.929351712437,
+    "TOLERANCE_BAND_HIGH": 9778.564288110667
   },
   "ETH": {
-    "Coingecko": 247.84,
-    "Coincap.io": 247.70588468418683,
-    "Coinmarketcap": 248.034185252,
-    "Alternative.me": 247.84,
-    "CryptoCompare": 247.66,
-    "Binance": 247.53,
-    "HuobiGlobal": 247.45499999999998,
-    "CoinbasePro": 247.595,
-    "Kraken": 247.72,
-    "Bitfinex": 246.005,
-    "Bitstamp": 247.615,
-    "Bittrex": 247.55563634499998
+    "Coingecko": 241.17,
+    "Coincap.io": 241.392768166977,
+    "Coinmarketcap": 243.569830544,
+    "Alternative.me": 241.17,
+    "CryptoCompare": 241.61,
+    "Binance": 241.875,
+    "HuobiGlobal": 241.785,
+    "CoinbasePro": 241.575,
+    "Kraken": 241.575,
+    "Bitfinex": 241.14,
+    "Bitstamp": 241.585,
+    "Bittrex": 241.76695972,
+    "AVERAGE": 241.585,
+    "TOLERANCE_BAND_LOW": 217.4265,
+    "TOLERANCE_BAND_HIGH": 265.74350000000004
   },
-  "AUD": {
-    "Exchangeratesapi.io": 0.7012946979205766,
-    "Freeforexapi.com": 0.7003100272490631,
-    "Fixer.io": 0.7019546792277843
+  "JPY": {
+    "Exchangeratesapi.io": 0.009311558611657415,
+    "Freeforexapi.com": 0.00935099406958086,
+    "Fixer.io": 0.00935199789143369,
+    "AVERAGE": 0.00935099406958086,
+    "TOLERANCE_BAND_LOW": 0.008415894662622775,
+    "TOLERANCE_BAND_HIGH": 0.010286093476538947
   },
-  "NZD": {
-    "Exchangeratesapi.io": 0.6553551881042964,
-    "Freeforexapi.com": 0.654398869198754,
-    "Fixer.io": 0.6558879428551371
+  "GBP": {
+    "Exchangeratesapi.io": 1.2786214493540147,
+    "Freeforexapi.com": 1.265886880348372,
+    "Fixer.io": 1.2652135960380517,
+    "AVERAGE": 1.265886880348372,
+    "TOLERANCE_BAND_LOW": 1.1392981923135348,
+    "TOLERANCE_BAND_HIGH": 1.3924755683832093
   },
-  "SEK": {
-    "Exchangeratesapi.io": 0.10874241193111582,
-    "Freeforexapi.com": 0.10901891696247133,
-    "Fixer.io": 0.10916948720748262
-  }
+  "CAD": {
+    "Exchangeratesapi.io": 0.7469792487664011,
+    "Freeforexapi.com": 0.7413992130788752,
+    "Fixer.io": 0.7408998295011849,
+    "AVERAGE": 0.7413992130788752,
+    "TOLERANCE_BAND_LOW": 0.6672592917709878,
+    "TOLERANCE_BAND_HIGH": 0.8155391343867628
+  },
+  "CHF": {
+    "Exchangeratesapi.io": 1.0569596729342974,
+    "Freeforexapi.com": 1.0620841276837538,
+    "Fixer.io": 1.0615989417119454,
+    "AVERAGE": 1.0615989417119454,
+    "TOLERANCE_BAND_LOW": 0.9554390475407508,
+    "TOLERANCE_BAND_HIGH": 1.16775883588314
+  },
   ...
 }
 ```

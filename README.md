@@ -6,6 +6,11 @@ Pegnet OPR Microservice that polls pAssets prices from Oracle(enabled data provi
 ### API Documentation
 https://documenter.getpostman.com/view/478114/SzzefKqm?version=latest
 
+### CCXT
+- **[CCXT](https://github.com/ccxt/ccxt)**&nbsp;&mdash;&nbsp; CryptoCurrency eXchange Trading Library.
+
+pegnetorpd uses CCXT for polling pAssets prices from top 10 external exchanges.
+
 ### Oracle Data
 | No | Data Source | URL | TYPE |
 | --- | --- | --- | --- |
@@ -76,7 +81,65 @@ https://documenter.getpostman.com/view/478114/SzzefKqm?version=latest
 | 41 | pBAT | Basic Attention Token |
 | 42 | pXTZ | Tezos |
 
-### CCXT
-- **[CCXT](https://github.com/ccxt/ccxt)**&nbsp;&mdash;&nbsp; CryptoCurrency eXchange Trading Library.
-
-pegnetorpd uses CCXT for polling pAssets prices from top 10 external exchanges.
+### Output
+- Endpoint: [Server]/api/rates
+- Output
+```shell
+{
+  "PEG": {
+    "Coingecko": 0.00146778,
+    "Coinmarketcap": 0.00135881879228,
+    "Factoshi.io": 0.0013482055
+  },
+  "USD": {
+    "Exchangeratesapi.io": 1,
+    "Freeforexapi.com": 1,
+    "Fixer.io": 1
+  },
+  "XBT": {
+    "Coingecko": 9884.04,
+    "Coincap.io": 9889.977199335026,
+    "Coinmarketcap": 9905.62300205,
+    "Alternative.me": 9884.04,
+    "CryptoCompare": 9883.61,
+    "Binance": 9878.005000000001,
+    "HuobiGlobal": 9877.305,
+    "CoinbasePro": 9881.64,
+    "Kraken": 9887.9,
+    "Bitfinex": 9850.25,
+    "Bitstamp": 9882.154999999999,
+    "bitFlyer": 9884.04,
+    "Bittrex": 9878.26034852
+  },
+  "ETH": {
+    "Coingecko": 247.84,
+    "Coincap.io": 247.70588468418683,
+    "Coinmarketcap": 248.034185252,
+    "Alternative.me": 247.84,
+    "CryptoCompare": 247.66,
+    "Binance": 247.53,
+    "HuobiGlobal": 247.45499999999998,
+    "CoinbasePro": 247.595,
+    "Kraken": 247.72,
+    "Bitfinex": 246.005,
+    "Bitstamp": 247.615,
+    "Bittrex": 247.55563634499998
+  },
+  "AUD": {
+    "Exchangeratesapi.io": 0.7012946979205766,
+    "Freeforexapi.com": 0.7003100272490631,
+    "Fixer.io": 0.7019546792277843
+  },
+  "NZD": {
+    "Exchangeratesapi.io": 0.6553551881042964,
+    "Freeforexapi.com": 0.654398869198754,
+    "Fixer.io": 0.6558879428551371
+  },
+  "SEK": {
+    "Exchangeratesapi.io": 0.10874241193111582,
+    "Freeforexapi.com": 0.10901891696247133,
+    "Fixer.io": 0.10916948720748262
+  }
+  ...
+}
+```

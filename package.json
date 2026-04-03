@@ -21,7 +21,7 @@
     "body-parser": "^1.19.0",
     "ccxt": "^1.29.66",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.22.1",
     "ioredis": "^4.14.1",
     "moment": "^2.26.0",
     "morgan": "^1.10.0",
